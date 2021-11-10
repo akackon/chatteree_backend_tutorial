@@ -1,13 +1,6 @@
-from flask import Flask, render_template
-import chatteree_backend
+from chatteree_backend import create_app
 
-app = Flask(__name__)
-
-
-@app.route("/")
-def index():
-    return "Hello World"
-
+app = create_app()
 
 if __name__ == "__main__":
     app.run(debug=True)
